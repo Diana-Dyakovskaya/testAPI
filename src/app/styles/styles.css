@@ -162,15 +162,24 @@ img {
   background-color: #f0f8ff;
 }
 
-.btn {
-  display: inline-block;
+.btns {
+  display: flex;
   margin-top: 50px;
+  gap: 30px;
+  justify-content: center;
+}
+
+.btn {
   padding: 20px 50px;
   background-color: #fff0f8;
   border: 2px solid #f0fff7;
   border-radius: 15px;
   box-shadow: 0 0 5px #f0fff7;
   cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px #c9ffe2;
 }
 
 .btn__text {
@@ -192,7 +201,7 @@ img {
 
 .container {
   margin: 50px auto;
-  padding: 0;
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -200,7 +209,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 article {

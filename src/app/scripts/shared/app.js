@@ -9,10 +9,10 @@ export const app = () => {
         .then((response) => response.json())
         .then((json) => {
           console.log(json)
-          json.forEach((elem) => {
+          json.forEach((element) => {
             const newElem = document.createElement('article')
-            newElem.innerHTML = `<h2 class="card__title">${elem.title}</h2>
-                                  <p class="card__body">${elem.body}</p>`
+            newElem.innerHTML = `<h2 class="card__title">${element.title}</h2>
+                                  <p class="card__body">${element.body}</p>`
             app.append(newElem)
           })
         })

@@ -5,7 +5,17 @@ export const app = () => {
     const app = document.querySelector('#app')
 
     btn.addEventListener('click', () => {
-      app.innerHTML = '<p>Hello</p>'
+      fetch('https://jsonplaceholder.typicode.com/posts')
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json)
+          json.forEach((elem) => {
+            const newElem = document.createElement('article')
+            newElem.innerHTML = `<h2 class="card__title">${elem.title}</h2>
+                                  <p class="card__body">${elem.body}</p>`
+            app.append(newElem)
+          })
+        })
     })
   })
 }

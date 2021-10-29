@@ -1,15 +1,17 @@
 {{!Home}}
 
 {{> layout/head page-title="Test API"}}
-<main class="main">
-  <div class="btns">
-    <div class="btn js-more">
-      <span class="btn__text">Load more</span>
+<main class="main text-blue-900 bg-blue-50 pt-20 pb-20 min-h-screen">
+  <div class="btns flex justify-center mt-0">
+    <div class="btn js-more px-50 py-5 bg-red-50 border-2 border-green-200 cursor-pointer
+    focus:ring-4">
+      <span class="btn__text text-xl leading-5">Load more</span>
     </div>
   </div>
-  <div class="content">
-    <div class="container">
-      <div class="app" id="app"></div>
+  <div class="content w-4/5 -mt-50 ml-auto mr-auto bg-red-50 border-2 border-green-200
+  transition-all duration-300">
+    <div class="container -mt-50 -mb-50 ml-auto mr-auto px-10 text-center">
+      <div class="app flex justify-center flex-wrap gap-8" id="app"></div>
     </div>
   </div>
 </main>

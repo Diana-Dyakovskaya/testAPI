@@ -16,7 +16,8 @@
           "each",
           "else",
           "include",
-          "mixin"
+          "mixin",
+          "tailwind"
         ]
       }
     ],

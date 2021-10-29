@@ -1,13 +1,7 @@
 {
-  "name": "testApi",
-  "version": "2.2.0",
   "private": true,
   "type": "module",
   "main": "gulpfile.mjs",
-  "homepage": "https://ereburg.github.io/infinite-selection",
-  "engines": {
-    "node": ">=12"
-  },
   "scripts": {
     "start": "gulp dev",
     "build": "gulp build",
@@ -18,11 +12,6 @@
     "predeploy": "gulp build",
     "deploy": "gh-pages -d dist"
   },
-  "author": {
-    "name": "Diana Dyakovskaya",
-    "email": "diana.dyakovskaya7@gmail.com"
-  },
-  "license": "MIT",
   "devDependencies": {
     "@types/node": "^16.7.10",
     "@typescript-eslint/eslint-plugin": "^4.30.0",

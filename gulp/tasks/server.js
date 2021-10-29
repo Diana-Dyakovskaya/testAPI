@@ -28,5 +28,5 @@ export const initWatcher = () => {
   watch(`${$.conf.app}/${$.conf.pathStyles}/**/*.scss`, series(styles))
   watch(`${$.conf.app}/${$.conf.pathJS}/**/*`, series(scripts))
   watch(`${$.conf.src}/${$.conf.pathAssets}/**/*`, series(assets))
-  watch(watchHBS, series(convertHBS, prepareHtmlDev))
+  watch(watchHBS, series(convertHBS, prepareHtmlDev, styles))
 }

@@ -6,19 +6,21 @@ import sass from 'sass'
 import Fibers from 'fibers'
 import tilde from 'node-sass-tilde-importer'
 import cleanCSS from 'gulp-clean-css'
+import tailwind from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import postcss from 'gulp-postcss'
 import cssnano from 'cssnano'
 import plumber from 'gulp-plumber'
 import { server } from './server.js'
+import tailwindConfig from '../../tailwind.config.js'
 
 const SCSS = gulpSass(sass)
 const { src, dest } = pkg
 
 export const styles = () => {
-  const sheets = [`${$.conf.app}/${$.conf.pathStyles}/*.scss`]
+  const sheets = [`${$.conf.app}/${$.conf.pathStyles}/*.{scss,css}`]
   const destPath = `${$.conf.outputPath}/${$.conf.pathStyles}`
-  const PostCSSPlugins = [autoprefixer({ cascade: false }), cssnano()]
+  const PostCSSPlugins = [tailwind(tailwindConfig), autoprefixer({ cascade: false }), cssnano()]
 
   switch ($.conf.isProd) {
     case true:
